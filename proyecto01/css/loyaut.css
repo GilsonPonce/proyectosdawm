@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+    margin: 0;
+    
+    color: white;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "section1 section2 section3"
+    "sectionForm sectionForm sectionForm"
+    "footer footer footer";
+    column-gap: 30px;
+    padding: 20px;
+}
+
+#section1{
+    grid-area: section1;
+}
+
+#section2{
+    grid-area: section2;
+}
+
+#section3{
+    grid-area: section3;
+}
+
+#sectionForm{
+    grid-area: sectionForm;
+}
+
+#footer{
+    grid-area: footer;
+}
+
