@@ -1,6 +1,96 @@
 .titulo{
+    font-size: 16px;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: inline;
     background-color: #0484cc;
+    margin-top: 50px;
 }
+
+.list-style-none{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.enunOne{
+   font-weight: bold;
+   margin-bottom:0;
+}
+
+.enunTwo{
+    margin:0px;
+    font-weight: 500;
+}
+
+.enunThree{
+    margin-top: 0px;
+    font-weight: 200;
+}
+
+.enuninfo{
+    font-size: 15px;
+}
+
+ion-icon{
+    font-size: 45px;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-skill{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 15px;
+    margin: 10px 0px;
+}
+
+.container header ~ h1{
+    font-size: 30px;
+    margin: 15px;
+}
+
+.container_video{
+    max-width: 450px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.presentation{
+    position: relative;
+}
+
+.presentation img {
+    position: absolute;
+    top: 30px;
+    left: 175px;
+}
+
+.container-barra{
+    height: 6px;
+    width: 400px;
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
+}
+
+.container-barra div{
+    background-color: #0484cc;
+    height: 6px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+
