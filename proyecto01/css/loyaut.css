@@ -9,14 +9,16 @@ body{
 
 main{
     display: grid;
-    grid-template-columns: 450px 450px 450px;
+    grid-template-columns: 32% 32% 32%;
     grid-template-rows: auto;
     grid-template-areas: 
     "section1 section2 section3"
     "sectionForm sectionForm sectionForm"
     "footer footer footer";
-    column-gap: 30px;
+    column-gap: 2rem;
     padding: 20px;
+    justify-items: stretch;
+    justify-content: center;
 }
 
 #section1{
@@ -39,3 +41,15 @@ main{
     grid-area: footer;
 }
 
+@media only screen and (max-width: 768px) {
+    main{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "section1""section2""section3"
+        "sectionForm"
+        "footer";
+        column-gap: 0rem;
+        padding: 20px;
+        justify-items: stretch;
+    }
+}
