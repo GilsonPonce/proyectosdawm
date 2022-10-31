@@ -94,6 +94,7 @@ article > header{
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    width: 100%;
 }
 
 .container-skill {

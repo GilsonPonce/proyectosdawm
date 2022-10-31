@@ -45,7 +45,9 @@ main{
     main{
         grid-template-columns: 100%;
         grid-template-areas: 
-        "section1""section2""section3"
+        "section1"
+        "section2"
+        "section3"
         "sectionForm"
         "footer";
         column-gap: 0rem;
