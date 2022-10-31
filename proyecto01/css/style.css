@@ -9,6 +9,17 @@
     margin-top: 50px;
 }
 
+.table{
+    border-spacing: 15px;
+    width: 100%;
+}
+
+#mapa{
+    width:100%;
+    height: 150px; 
+    border:0;
+}
+
 .ml-14 {
     margin-left: 14px;
 }
@@ -141,7 +152,7 @@ article > header{
 
 .container-barra {
     height: 6px;
-    width: 100%;
+    width: 17rem;
     border-radius: 10px;
     background: white;
     overflow: hidden;
