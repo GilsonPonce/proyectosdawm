@@ -3,7 +3,6 @@ const btnprevious = document.getElementById("btnprevious");
 const limit = 4;
 let peticion = 0;
 
-
 window.addEventListener("load", () => {
   llenarPersonajes();
   habilitarBotonPrevious();
@@ -33,7 +32,7 @@ function llenarPersonajes(offset) {
     results.map(({ name, description, thumbnail }) => {
 
       containerPersonajes.innerHTML += `
-            <div class="col-6">
+            <div class="col-6 animate__animated animate__backInLeft">
             <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-4">
