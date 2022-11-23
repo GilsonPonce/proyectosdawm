@@ -11,9 +11,9 @@ window.addEventListener("load", () => {
                 <img src="${thumbnail.path + "." + thumbnail.extension}" class="img-fluid rounded-start" alt="imagen del personaje ${name}">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
+                <div class="card-body text-dark">
                   <h5 class="card-title">${name}</h5>
-                  <p class="card-text">${description}</p>
+                  <p class="card-text fs-6">${description}</p>
                   <p class="card-text"><small class="text-muted">${modified}</small></p>
                 </div>
               </div>
