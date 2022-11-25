@@ -29,11 +29,9 @@ function llenarPersonajes(offset) {
 </div>`;
   obtenerPersonajes(offset).then(({ results }) => {
     containerPersonajes.innerHTML = "";
-    results.map(({ name, description, thumbnail }) => {
-
-      containerPersonajes.innerHTML += `
-            <div class="col-6 animate__animated animate__backInLeft">
-            <div class="card mb-3" style="max-width: 540px;">
+    results.map(({ resourceURI, name, description, thumbnail }) => {
+      containerPersonajes.innerHTML += `<div class="col-6 animate__animated animate__backInLeft">
+            <div class="card mb-3" style="max-width: 640px;" onclick="cargarEstadisticas('${resourceURI}')">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="${thumbnail.path + "." + thumbnail.extension}" class="img-fluid rounded-start" alt="imagen del personaje ${name}">
@@ -45,16 +43,15 @@ function llenarPersonajes(offset) {
                 </div>
               </div>
             </div>
-          </div>
-        </div>`
+        </div></div>`
 
     })
   })
 }
 
 async function obtenerPersonajes(offset = 0) {
-  const URL = `http://gateway.marvel.com/v1/public/characters?limit=${limit}&offset=${offset}&ts=3000&apikey=c0c7a7a4d7b567db6bdd487b26f69959&hash=edd7c232f6dda15da4de0ba9ce76426d`;
-  const response = await fetch(URL);
+  let url = URL+`characters?limit=${limit}&offset=${offset}&`+CREDENTIAL;
+  const response = await fetch(url);
   const personajes = await response.json();
   return personajes.data;
 }

@@ -7,3 +7,20 @@ body{
 .card-text{
     font-size: 0.9em;
 }
+
+#personajes > a{
+    text-decoration: none;
+}
+
+.card{
+    cursor: pointer;
+    color: black;
+}
+
+#graficone{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 300px;
+    max-width: 500px;
+}

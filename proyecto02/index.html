@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="contenido">
         <article class="container text-center">
             <section class="row">
                 <h1 class="p-2">Marvel</h1>
@@ -22,13 +22,16 @@
             <section class="row m-2 d-flex justify-content-center" id="personajes">
 
             </section>
-            <section class="m-4">
+            <section class=" row m-4">
                 <button class="btn btn-warning d-none" id="btnprevious">Previous</button>
                 <button class="btn btn-success" id="btnnext">Next</button>
             </section>
         </article>
     </main>
+    <script src="./js/credential.js"></script>
     <script src="./js/fecthPersonajes.js"></script>
+    <script src="./js/getInfoPersonaje.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
