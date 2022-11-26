@@ -59,16 +59,16 @@ function cargarInterfaz(urlCharacter) {
 function filtroEvent() {
     let filter = document.querySelector("div.col-6 select.form-select");
     switch (filter.value) {
-        case 1:
+        case '1':
             sendInfoComicsToGrafic();
             break;
-        case 2:
+        case '2':
             sendInfoSeriesToGrafic();
             break;
-        case 3:
+        case '3':
             sendInfoStoriesToGrafic();
             break;
-        case 4:
+        case '4':
             sendInfoEventsToGrafic();
             break;
         default:
@@ -86,7 +86,7 @@ function sendInfoComicsToGrafic(){
             data[title] = pageCount;
         })
         grafictwoRef = cargarGaleriaTwo(data);
-        grafictwoRef.update();
+        grafictwoRef.update('active');
     })
 }
 
@@ -100,7 +100,7 @@ function sendInfoSeriesToGrafic(){
             data[title] = creators.available;
         })
         grafictwoRef = cargarGaleriaTwo(data);
-        grafictwoRef.update();
+        grafictwoRef.update('active');
     })
 }
 
@@ -114,7 +114,7 @@ function sendInfoStoriesToGrafic(){
             data[title] = creators.available;
         })
         grafictwoRef = cargarGaleriaTwo(data);
-        grafictwoRef.update();
+        grafictwoRef.update('active');
     })
 }
 
@@ -128,7 +128,7 @@ function sendInfoEventsToGrafic(){
             data[title] = creators.available;
         })
         grafictwoRef = cargarGaleriaTwo(data);
-        grafictwoRef.update();
+        grafictwoRef.update('active');
     })
 }
 
