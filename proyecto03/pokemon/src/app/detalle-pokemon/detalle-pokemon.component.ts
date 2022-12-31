@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GetPokemonService } from '../servicios/get-pokemon.service';
 import { Pokemon } from '../interfaz/pokemon';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-detalle-pokemon',
@@ -15,7 +16,7 @@ export class DetallePokemonComponent {
   experience:number = 0;
   description:string = '';
 
-  constructor(private route: ActivatedRoute, private servicePokemon:GetPokemonService){
+  constructor(private route: ActivatedRoute,private location: Location, private servicePokemon:GetPokemonService){
     this.route.params.subscribe(params => {
       this.pokemonid = params['id'];
     });
@@ -35,6 +36,10 @@ export class DetallePokemonComponent {
         }
       });
     });
+  }
+
+  back(): void {
+    this.location.back();
   }
 
 }

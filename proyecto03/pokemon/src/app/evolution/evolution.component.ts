@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
+import { Location } from '@angular/common'
 import { GetPokemonService } from '../servicios/get-pokemon.service';
 import { Result } from '../interfaz/pokemones';
 
@@ -13,7 +14,7 @@ export class EvolutionComponent {
   urlevol:string = "";
   pokemones: Result[] = [];
 
-  constructor(private route: ActivatedRoute, private servicePokemon: GetPokemonService) {
+  constructor(private route: ActivatedRoute, private location: Location,private servicePokemon: GetPokemonService) {
     this.route.params.subscribe(params => {
       this.pokemonid = params['id'];
     });
@@ -34,4 +35,9 @@ export class EvolutionComponent {
 
     });
   }
+
+  back(): void {
+    this.location.back();
+  }
+
 }

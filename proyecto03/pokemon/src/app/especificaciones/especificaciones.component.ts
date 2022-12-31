@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GetPokemonService } from '../servicios/get-pokemon.service';
+import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-especificaciones',
@@ -17,7 +18,7 @@ export class EspecificacionesComponent {
   tipo: string[] = [];
   debilidad: string[] = [];
   color = '#9ADEF8';
-  constructor(private route: ActivatedRoute, private servicePokemon:GetPokemonService){
+  constructor(private route: ActivatedRoute, private location: Location, private servicePokemon:GetPokemonService){
     this.route.params.subscribe(params => {
       this.pokemonid = params['id'];
     });
@@ -119,6 +120,10 @@ export class EspecificacionesComponent {
           this.color = '#4DBF86'
       }
     })
+  }
+
+  back(): void {
+    this.location.back();
   }
 
 }
