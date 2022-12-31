@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">  
+    <button mat-icon-button color="accent" aria-label="menu">  
+       <mat-icon>menu</mat-icon>  
+    </button>  
+    <span>Pokemon</span>  
+</mat-toolbar>
+<div class="container text-center">
+    <img src={{image}} class="rounded mx-auto d-block" alt={{name}}>
+    <p class="h4">{{name}}</p>
+    <p class="h5">{{experience}}</p>
+    <p>{{description}}</p>
+    <a routerLink="/especificaciones/{{pokemonid}}" class="btn btn-primary">Ver Especificaciones</a>
+</div>

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">  
+    <button mat-icon-button color="accent" aria-label="menu">  
+       <mat-icon>menu</mat-icon>  
+    </button>  
+    <span>Pokemon</span>  
+  </mat-toolbar>
+  <div class="containe text-center">
+    <div class="row justify-content-center">
+      <div class="col-sm-3" *ngFor="let hero of pokemones">
+        <app-card-pokemon [poke]="hero" > </app-card-pokemon>
+      </div>
+    </div>
+  </div>
