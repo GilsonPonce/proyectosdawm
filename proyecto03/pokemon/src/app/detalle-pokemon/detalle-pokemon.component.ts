@@ -23,7 +23,7 @@ export class DetallePokemonComponent {
 
   ngOnInit(): void{
     this.servicePokemon.getPokemonId(this.pokemonid).subscribe(data =>{
-      this.name = data.name;
+      this.name = data.name.toUpperCase();
       this.image = data.sprites.other?.dream_world.front_default || "";
       this.experience = data.base_experience;
     });

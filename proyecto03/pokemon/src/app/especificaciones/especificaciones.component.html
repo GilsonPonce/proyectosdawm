@@ -1,35 +1,54 @@
+<mat-toolbar color="primary">  
+    <button mat-icon-button color="accent" aria-label="menu">  
+       <mat-icon>menu</mat-icon>  
+    </button>  
+    <span>Pokemon</span>  
+</mat-toolbar>
 <div class="container">
-    <p class="h3">{{name}}</p>
+    <p class="h3 text-center">{{name}}</p>
     <div class="container p-3">
-        <div class="row">
-            <div class="col3">
-                <p>Altura</p>
-                <p>{{altura}}</p>
+        <div class="row p-3 rounded text-white" [style.background-color]='color'>
+            <div class="col-6">
+                <p><b>ALTURA</b></p>
+                <p class="text-black">{{altura}}</p>
             </div>
-            <div class="col3">
-                <p>Categoria</p>
-                <div class="row">
-                    <div class="col" *ngFor="let cate of categoria"><p>{{cate}}</p></div>
-                </div>
+            <div class="col-6">
+                <p><b>CATEGORIA</b></p>
+                <p class="text-black">{{categoria}}</p>
             </div>
-            <div class="col3">
-                <p>Peso</p>
-                <p>{{peso}}</p>
+            <div class="col-6">
+                <p><b>PESO</b></p>
+                <p class="text-black">{{peso}}</p>
             </div>
-            <div class="col3">
-                <p>Habilidad</p>
-                <div class="row">
-                    <div class="col" *ngFor="let hab of habilidad">{{hab}}</div>
+            <div class="col-6">
+                <p><b>HABILIDADES</b></p>
+                <div class="row text-black">
+                    <div class="col-12" *ngFor="let hab of habilidad">{{hab}}</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
         <p class="h4">Tipo</p>
-        
+        <div class="row">
+            <div class="col rounded-4" *ngFor="let ti of tipo">
+                <span class="rounded-4 border-1 bg-info bg-opacity-25 py-1 px-3">
+                    {{ti}}
+                </span>
+            </div>
+        </div>
     </div>
     <div class="container">
         <p class="h4">Debilidad</p>
+        <div class="row text-start">
+            <div class="col m-1" *ngFor="let deb of debilidad">
+                <span class="rounded-4 border-1 bg-warning py-1 px-3">
+                    {{deb}}
+                </span>
+            </div>
+        </div>
     </div>
-    <a routerLink="/evolution/{{pokemonid}}" class="btn btn-success">Ver Evoluciones</a>
+    <div class="container text-center">
+        <a routerLink="/evolution/{{pokemonid}}" class="text-center btn btn-success">Ver Evoluciones</a>
+    </div>
 </div>

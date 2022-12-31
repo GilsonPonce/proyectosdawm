@@ -1,7 +1,7 @@
 <div class="card m-4">
-  <img src={{image}} class="card-img-top" alt={{poke.name}}>
+  <img src={{image}} class="card-img-top img-fluid p-5" alt={{poke.name}}>
   <div class="card-body">
-    <h5 class="card-title">{{poke.name}}</h5>
+    <h5 class="card-title my-4">{{poke.name.toUpperCase()}}</h5>
     <a routerLink="/detalle/{{id}}" class="btn btn-success">Ver Detalles</a>
   </div>
 </div>
