@@ -5,10 +5,10 @@ var router = express.Router();
 const { Sequelize, Op } = require('sequelize');
 const Customers = require('../models').customers;
 
-router.get('/findAll/json', function (req, res, next) {
-
-
-    Customers.findAll()
+router.get('/', function (req, res, next) {
+    Customers.findAll({
+        attributes: { exclude: ["updatedAt","createdAt","id"] }
+    })
         .then(customers => {
             res.json(customers);
         })

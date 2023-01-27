@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "systrom1223.",
-    "database": "album",
+    "database": "enterprise",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "systrom1223.",
-    "database": "album",
+    "database": "enterprise",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
