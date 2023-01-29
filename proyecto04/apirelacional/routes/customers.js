@@ -16,5 +16,24 @@ router.get('/', function (req, res, next) {
 
 });
 
+router.get('/:id', function (req, res, next) {
+
+    let id = parseInt(req.params.id);
+     
+    Customers.findAll({
+        attributes: { exclude: ["updatedAt","createdAt","id"] },
+        where: {
+            [Op.and]: [
+                { customerNumber: id }
+            ]
+        }
+    })
+        .then(fotos => {
+            res.json(fotos);
+        })
+        .catch(error => res.status(400).send(error))
+
+});
+
 
 module.exports = router;

@@ -3,18 +3,19 @@ var router = express.Router();
 
 router.post('/total', function(req, res, next) {  
 
-    let array = []
+    let collectionarray = req.body
+    let keys = Object.keys(collectionarray)
 
-    array = req.body
-
-    if (array.length == 0){
+    if (keys.length == 0){
         res.status(400).send("No hay datos");
     }
 
     let total = 0;
 
-    array.map(orden =>{
-        total += (orden["priceEach"] * orden["quantityOrdered"])
+    keys.map(key =>{
+        if(collectionarray[key]["status"] == "Shipped"){
+            total += (parseFloat(collectionarray[key]["priceEach"]) * parseFloat(collectionarray[key]["quantityOrdered"]))
+        }
     })
 
     res.json({
